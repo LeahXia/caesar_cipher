@@ -5,8 +5,8 @@ convertedArr = []
 textArr.each do |letter|
   letterOrd = letter.ord
   letterOrdAfter = letterOrd +key  
-    if (letter >= "A" && letter <= "Z") || (letter >= "a" && letter <= "z")
-        if letterOrdAfter <= 90 || (letterOrdAfter >=97 && letterOrdAfter <=122)
+    if letterOrd.between?(65,90) || letterOrd.between?(97,122)
+        if letterOrdAfter.between?(65,90)|| letterOrdAfter.between?(97,122) 
             convertedArr << letterOrdAfter.chr
         else
             convertedArr << (letterOrdAfter-26).chr
